@@ -470,9 +470,11 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
-      .nav-links, nav > .btn-primary { display: none; }
+      .nav-links, nav > .btn-primary, nav div > a.btn-primary { display: none; }
       .hamburger { display: flex; }
       .mobile-nav { display: flex; }
+      .pricing-row-name { flex-wrap: wrap; }
+      .pricing-bundle-tag { margin-left: 0; margin-top: 4px; flex-basis: 100%; }
       .hero-grid { grid-template-columns: 1fr; gap: 48px; }
       .hero-visual { order: -1; }
       .hero-badge { left: 0; bottom: -12px; }
