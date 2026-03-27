@@ -874,12 +874,14 @@
       </div>
       <div class="contact-form reveal" style="transition-delay:.1s">
         <h3>Send an Enquiry</h3>
-        <form novalidate>
+        <form action="https://formspree.io/f/mgopvgaw" method="POST">
+          <!-- Honeypot — hidden from real users, bots fill it and get ignored -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
-            <div class="form-group"><label for="f-name">Your Name</label><input type="text" id="f-name" name="name" placeholder="Se&aacute;n Murphy" autocomplete="name" required/></div>
-            <div class="form-group"><label for="f-phone">Phone</label><input type="tel" id="f-phone" name="phone" placeholder="+353 8X XXX XXXX" autocomplete="tel"/></div>
+            <div class="form-group"><label for="f-name">Your Name</label><input type="text" id="f-name" name="name" placeholder="Se&aacute;n Murphy" autocomplete="name" maxlength="80" required/></div>
+            <div class="form-group"><label for="f-phone">Phone</label><input type="tel" id="f-phone" name="phone" placeholder="+353 8X XXX XXXX" autocomplete="tel" maxlength="20"/></div>
           </div>
-          <div class="form-group"><label for="f-email">Email</label><input type="email" id="f-email" name="email" placeholder="sean@example.com" autocomplete="email" required/></div>
+          <div class="form-group"><label for="f-email">Email</label><input type="email" id="f-email" name="email" placeholder="sean@example.com" autocomplete="email" maxlength="120" required/></div>
           <div class="form-group">
             <label for="f-service">Service Needed</label>
             <select id="f-service" name="service">
@@ -887,7 +889,7 @@
               <option>Repair</option><option>Banding</option><option>Sanding</option><option>Gripping</option><option>Full Refresh Bundle</option><option>Not sure, need advice</option>
             </select>
           </div>
-          <div class="form-group"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about the hurley, what&rsquo;s damaged, what needs doing, any useful details&hellip;"></textarea></div>
+          <div class="form-group"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about the hurley, what&rsquo;s damaged, what needs doing, any useful details&hellip;" maxlength="1000"></textarea></div>
           <div class="form-upload">
             <span class="upload-label">Photo of Hurley (Optional)</span>
             <div class="upload-zone" role="button" tabindex="0" aria-label="Upload a photo of your hurley">
